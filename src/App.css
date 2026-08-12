@@ -1,0 +1,87 @@
+button{
+  padding: 5px 5px;
+  margin: 5px 5px;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.205);
+  padding: 10px;
+  overflow: visible;
+}
+
+.card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+  border-radius: 10px;
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+.card img:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.35);
+}
+
+.card p {
+  padding: 10px;
+  margin: 0;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: 'Poppins', sans-serif;
+}
+
+.foot {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin: 24px 0;
+  font-size: 14px;
+}
+
+.previous,
+.next {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 10px;
+  background: #111827;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.previous:hover,
+.next:hover {
+  background: #1f2937;
+  transform: translateY(-2px);
+}
+
+.previous:disabled {
+  background: #9ca3af;
+  cursor: not-allowed;
+  opacity: 0.9;
+}
+
+.loading {
+  text-align: center;
+  margin: 20px 0;
+  color: #374151;
+}
+
+.pageNumber {
+  font-size: 20px;
+  font-weight: 600;
+  color: #111827;
+}
